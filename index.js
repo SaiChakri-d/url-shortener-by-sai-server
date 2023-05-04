@@ -94,7 +94,7 @@ app.post("/signup", async function (request, response) {
     //  const addtoken= await addTokenInDb(email,token)
     const linkForUser = `${process.env.BACKEND_URL}/activatelink/${token}`;
     let transporter = nodemailer.createTransport({
-      host: "smtp.zoho.in",
+      host: "smtppro.zoho.in",
       secure: true, // use SSL
       port: 465,
       auth: {
@@ -186,7 +186,7 @@ app.post("/forgetPassword", async function (request, response) {
     //Create Transporter
     const linkForUser = `${process.env.FRONTEND_URL}/reset-password/${userFromDB._id}/${randomString}`;
     let transporter = nodemailer.createTransport({
-      host: "smtp.zoho.in",
+      host: "smtppro.zoho.in",
       secure: true, // use SSL
       port: 465,
       auth: {
